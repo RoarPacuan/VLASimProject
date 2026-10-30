@@ -1,0 +1,13 @@
+diff --git a/apps/isaaclab.python.kit b/apps/isaaclab.python.kit
+index 44d64c63d..8432d4cc4 100644
+--- a/apps/isaaclab.python.kit
++++ b/apps/isaaclab.python.kit
+@@ -30,6 +30,8 @@ keywords = ["experience", "app", "usd"]
+ "omni.kit.manipulator.camera" = {}
+ "omni.kit.manipulator.prim" = {}
+ "omni.kit.manipulator.selection" = {}
++"omni.kit.livestream.app" = {}
++"omni.kit.livestream.webrtc" = {}
+ "omni.kit.material.library" = {}
+ "omni.kit.menu.common" = { order = 1000 }
+ "omni.kit.menu.create" = {}

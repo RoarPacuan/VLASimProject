@@ -1,0 +1,18 @@
+# UR5e + RG2 lift-the-named-box demos (run_ur5e_record.sh) -> native LeRobot.
+data_root: "/datasets/"
+hdf5_name: "lift_boxes/*.hdf5"          # all recording runs, merged
+output_dir: "/datasets/lift_boxes_lerobot"
+repo_id: "local/ur5e_lift_boxes"
+
+language_instruction: "pick up the box"  # fallback only
+instruction_template: "pick up the {color} box"
+instruction_obs_key: "target_color_id"   # index into color_names (same order as ur5e_lift.py)
+
+state_name_sim: "robot_joint_pos"
+action_name_sim: "processed_actions"
+pov_cam_name_sim: "wrist_camera_rgb"
+video_name_lerobot: "observation.images.wrist"
+extra_cameras:
+  external_camera_rgb: "observation.images.front"
+
+fps: 50                                  # must match UR5E_CONTROL_HZ

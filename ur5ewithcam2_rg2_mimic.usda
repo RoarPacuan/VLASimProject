@@ -1,0 +1,73 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    subLayers = [
+        @./ur5ewithcam2_rg2_fixed.usd@
+    ]
+)
+
+over "World"
+{
+    over "org2"
+    {
+        over "onrobot_rg2_base_link"
+        {
+            over "left_inner_knuckle_joint" (
+                prepend apiSchemas = ["PhysxMimicJointAPI:rotX"]
+            )
+            {
+                custom float physxMimicJoint:rotX:gearing = 1
+                custom float physxMimicJoint:rotX:offset = 0
+                custom rel physxMimicJoint:rotX:referenceJoint = </World/org2/onrobot_rg2_base_link/finger_joint>
+                uniform token physxMimicJoint:rotX:referenceJointAxis = "rotX"
+            }
+
+            over "right_outer_knuckle_joint" (
+                prepend apiSchemas = ["PhysxMimicJointAPI:rotX"]
+            )
+            {
+                custom float physxMimicJoint:rotX:gearing = 1
+                custom float physxMimicJoint:rotX:offset = 0
+                custom rel physxMimicJoint:rotX:referenceJoint = </World/org2/onrobot_rg2_base_link/finger_joint>
+                uniform token physxMimicJoint:rotX:referenceJointAxis = "rotX"
+            }
+
+            over "right_inner_knuckle_joint" (
+                prepend apiSchemas = ["PhysxMimicJointAPI:rotX"]
+            )
+            {
+                custom float physxMimicJoint:rotX:gearing = 1
+                custom float physxMimicJoint:rotX:offset = 0
+                custom rel physxMimicJoint:rotX:referenceJoint = </World/org2/onrobot_rg2_base_link/finger_joint>
+                uniform token physxMimicJoint:rotX:referenceJointAxis = "rotX"
+            }
+        }
+
+        over "left_outer_knuckle"
+        {
+            over "left_inner_finger_joint" (
+                prepend apiSchemas = ["PhysxMimicJointAPI:rotX"]
+            )
+            {
+                custom float physxMimicJoint:rotX:gearing = -1
+                custom float physxMimicJoint:rotX:offset = 0
+                custom rel physxMimicJoint:rotX:referenceJoint = </World/org2/onrobot_rg2_base_link/finger_joint>
+                uniform token physxMimicJoint:rotX:referenceJointAxis = "rotX"
+            }
+        }
+
+        over "right_outer_knuckle"
+        {
+            over "right_inner_finger_joint" (
+                prepend apiSchemas = ["PhysxMimicJointAPI:rotX"]
+            )
+            {
+                custom float physxMimicJoint:rotX:gearing = -1
+                custom float physxMimicJoint:rotX:offset = 0
+                custom rel physxMimicJoint:rotX:referenceJoint = </World/org2/onrobot_rg2_base_link/finger_joint>
+                uniform token physxMimicJoint:rotX:referenceJointAxis = "rotX"
+            }
+        }
+    }
+}
+

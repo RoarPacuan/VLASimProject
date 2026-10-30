@@ -1,0 +1,17 @@
+# Copyright (c) 2026, The Isaac Lab Arena Project Developers (https://github.com/isaac-sim/IsaacLab-Arena/blob/main/CONTRIBUTORS.md).
+# All rights reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+action_horizon: 16
+embodiment_tag: NEW_EMBODIMENT
+video_backend: decord
+modality_config_path: isaaclab_arena_gr00t/embodiments/ur5e/ur5e_manipulation_data_config.py
+policy_joints_config_path: isaaclab_arena_gr00t/embodiments/ur5e/ur5e_7dof_joint_space.yaml
+action_joints_config_path: isaaclab_arena_gr00t/embodiments/ur5e/ur5e_7dof_joint_space.yaml
+state_joints_config_path: isaaclab_arena_gr00t/embodiments/ur5e/ur5e_12dof_state_space.yaml
+action_chunk_length: 16
+task_mode_name: droid_manipulation
+pov_cam_name_sim: ["external_camera_rgb", "wrist_camera_rgb"]
+original_image_size: [720, 1280, 3]
+target_image_size: [180, 320, 3]

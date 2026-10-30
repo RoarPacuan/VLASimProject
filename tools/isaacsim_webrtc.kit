@@ -1,0 +1,27 @@
+[package]
+title = "Arena Isaac Sim WebRTC"
+description = "Isaac Sim full experience with explicit WebRTC support"
+version = "1.0.0"
+keywords = ["experience", "webrtc", "streaming"]
+
+[dependencies]
+"isaacsim.exp.base" = {}
+"omni.kit.livestream.app" = {}
+"omni.kit.livestream.webrtc" = {}
+
+[settings.app]
+name = "Arena Isaac Sim WebRTC"
+vulkan = true
+
+[settings.app.extensions]
+excluded = ["omni.simready.content.browser", "omni.warp.core"]
+
+[settings.app.livestream]
+allowResize = true
+outDirectory = "${data}"
+
+[settings.exts."omni.kit.livestream.app"]
+primaryStream.signalPort = 49100
+primaryStream.streamPort = 47998
+primaryStream.allowDynamicResize = true
+primaryStream.streamType = "webrtc"
